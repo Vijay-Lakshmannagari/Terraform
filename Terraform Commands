@@ -4,12 +4,15 @@ terraform validate
 terraform plan
 terraform apply 
 terraform apply --auto-approve
+terraform apply --auto-approve -var-file="prod.tfvars"
 terraform destroy 
 terraform destroy --auto-approve
 terraform destroy --auto-approve -target=aws_instance.myinstance[0]
 terraform destroy --auto-approve -target=aws_instance.myinstance[0] -target=aws_instance.myinstance[1]
+terraform destroy --auto-approve -var-file="dev.tfvars"
 -----------------------------------------------------------------------
 terraform state list
 terraform state 
 terraform state show aws_instance.myinstance[0]
 terraform state show aws_instance.myinstance[0] | grep "id"
+------------------------------------------------------------------------
