@@ -6,6 +6,10 @@ terraform apply
 terraform apply --auto-approve
 terraform destroy 
 terraform destroy --auto-approve
+terraform destroy --auto-approve -target=aws_instance.myinstance[0]
+terraform destroy --auto-approve -target=aws_instance.myinstance[0] -target=aws_instance.myinstance[1]
 -----------------------------------------------------------------------
 terraform state list
 terraform state 
+terraform state show aws_instance.myinstance[0]
+terraform state show aws_instance.myinstance[0] | grep "id"
