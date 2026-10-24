@@ -19,3 +19,9 @@ terraform state
 terraform state show aws_instance.myinstance[0]
 terraform state show aws_instance.myinstance[0] | grep "id"
 ------------------------------------------------------------------------
+terraform workspace list
+terraform workspace show
+terraform workspace new Dev
+terraform workspace select Dev
+terraform workspace delete Dev
+
